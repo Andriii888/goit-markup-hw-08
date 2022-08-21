@@ -1,0 +1,14 @@
+button {
+    cursor: pointer;
+    font-family: var(--font-family-primary);
+    border: none;
+    display: block;
+    margin: 0 auto;
+    &:hover,
+    &:focus {
+    background-color: var(--accent-text-color);
+    color: var(--color-white);
+}
+
+}
+
