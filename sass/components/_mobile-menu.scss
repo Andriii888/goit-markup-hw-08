@@ -5,6 +5,15 @@
     top:0;
     left:0;
     background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.mobile-menu.is-open{
+        visibility:visible;
+            opacity:1;
+            pointer-events: auto;
+            transition: opacity var(--transition-dur-func),visibility var(--transition-dur-func);
 }
 .mobile-menu-open {
     background-color: transparent;
@@ -16,6 +25,10 @@
 
 .mobile-menu__container{
     position: relative;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 25px;
+
 }
 .mobile-menu__btn{
     position: absolute;
