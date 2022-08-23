@@ -114,50 +114,52 @@ button:hover, button:focus {
   color: var(--color-white);
 }
 
-.mobile-menu {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .mobile-menu.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity var(--transition-dur-func), visibility var(--transition-dur-func);
+  }
+  .mobile-menu-open {
+    background-color: transparent;
+    border: none;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-menu__container {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 25px;
+  }
+  .mobile-menu__btn {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    line-height: 0;
+    padding: 0;
+    top: 10px;
+    right: 15px;
+  }
 }
-
-.mobile-menu.is-open {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity var(--transition-dur-func), visibility var(--transition-dur-func);
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
-
-.mobile-menu-open {
-  background-color: transparent;
-  border: none;
-  line-height: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.mobile-menu__container {
-  position: relative;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 25px;
-}
-
-.mobile-menu__btn {
-  position: absolute;
-  background-color: transparent;
-  border: none;
-  line-height: 0;
-  padding: 0;
-  top: 10px;
-  right: 15px;
-}
-
 .footer-user-input {
   display: block;
   padding-left: 16px;
@@ -438,11 +440,6 @@ p.overlay-portfolio-text {
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
-  .mobile-menu-open {
-    display: none;
-  }
-}
 .header-container {
   display: flex;
   align-items: center;
@@ -450,6 +447,96 @@ p.overlay-portfolio-text {
   padding-top: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .mobile-menu-open {
+    display: none;
+  }
+  .header-navigation {
+    display: flex;
+    align-items: center;
+  }
+  .header-navigation__links {
+    display: flex;
+    margin-left: 88px;
+    gap: 50px;
+  }
+  .header {
+    border-bottom: 1px solid #ECECEC;
+  }
+  .header-navigation__links a {
+    transition: color var(--transition-dur-func);
+    font-style: normal;
+    color: var(--primary-text-colorry);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  .header-navigation__links a:hover, .header-navigation__links a:focus {
+    color: var(--accent-text-color);
+  }
+  .header__contacts {
+    text-align: start;
+  }
+  .header-navigation__link {
+    position: relative;
+    transition: color var(--transition-dur-func);
+  }
+  .header-navigation__link:hover, .header-navigation__link:focus {
+    color: var(--accent-text-color);
+  }
+  .header__contact-link {
+    position: relative;
+    transition: color var(--transition-dur-func);
+  }
+  .header__contact-link:hover, .header__contact-link:focus {
+    color: var(--accent-text-color);
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    margin-top: 28px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-text-color);
+  }
+  .icon-letter {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  .icon-phone {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  .header__contacts a {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+  }
+  .header-navigation__links .current {
+    color: var(--accent-text-color);
+  }
+  .logo {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--accent-text-color);
+  }
+  .logo__studio {
+    color: var(--logo-color-header);
+  }
+}
 .hero {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(..//images/bgheroimg.jpg);
   background-repeat: no-repeat;
