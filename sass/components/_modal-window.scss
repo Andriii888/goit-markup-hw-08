@@ -8,18 +8,24 @@
     top: 0;
     left: 0;
     transition: opacity var(--transition-dur-func), visibility var(--transition-dur-func);
-}
-
-.modal {
+}.modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 528px;
+    max-width: 450px;
     height: 581px;
     background-color: var(--color-white);
     padding: 40px;
 }
+@media screen and (min-width:768px){
+    .modal{
+        max-width:528px;
+    }
+}
+
+
+
 
 .modal-close-btn {
 @extend %align;
