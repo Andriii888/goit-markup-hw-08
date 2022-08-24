@@ -1,4 +1,5 @@
-    .team {
+    @media screen and(min-width:200px) {
+.team {
         background-color: var(--background-color-team);
     }
 
@@ -82,7 +83,8 @@
         color: var(--icons-color);
         transition: color var(--transition-dur-func),
             background-color var(--transition-dur-func);
-    &:hover,
+
+        &:hover,
         &:focus {
             color: var(--color-white);
             background-color: var(--accent-text-color);
@@ -93,3 +95,12 @@
     .social-team-icons {
         fill: currentColor;
     }
+
+    }
+    @media screen and (min-width:1200px) {
+
+.our-team{
+    flex-wrap: nowrap;
+}
+    }
+   

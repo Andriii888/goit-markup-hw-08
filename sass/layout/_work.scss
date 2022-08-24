@@ -1,8 +1,14 @@
-    .our-work {
+    
+         @media screen and (max-width:1199px){
+            .work{
+                display: none;
+            }
+         }
+    @media screen and (min-width:1200px){
+.our-work {
         display: flex;
-        flex-wrap: wrap;
         gap: 30px;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .work-title {
@@ -40,3 +46,5 @@
     .our-work-img {
         position: relative;
     }
+    }
+   

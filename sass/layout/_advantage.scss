@@ -108,9 +108,8 @@
         }
     
         .our-advantage {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
+            justify-content:space-between;
+            flex-wrap:nowrap;
     
         }
     
@@ -120,8 +119,6 @@
     
         .items-advantage {
             width: 270px;
-            text-align: start;
-            margin-bottom: 30px;
         }
 }
 
