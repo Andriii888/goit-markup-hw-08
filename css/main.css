@@ -204,6 +204,7 @@ button:hover, button:focus {
     font-size: 18px;
     line-height: 1.22;
     margin-top: 64px;
+    flex-wrap: wrap;
   }
   .mobile-social-menu a {
     color: var(--accent-text-color);
@@ -1209,7 +1210,7 @@ p.overlay-portfolio-text {
     flex-direction: column;
   }
   .img-portfolio__items {
-    width: 450px;
+    min-width: 350px;
   }
   .img-portfolio-items,
 .portfolio-menu-items {

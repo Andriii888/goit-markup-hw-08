@@ -97,6 +97,7 @@
     font-size: 18px;
         line-height: 1.22;
         margin-top: 64px;
+        flex-wrap: wrap;
         & a{
         color: var(--accent-text-color);
         }
