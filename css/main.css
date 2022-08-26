@@ -169,9 +169,15 @@ button:hover, button:focus {
     font-size: 40px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+    margin-top: 35px;
   }
   .mobile-navigation a:hover, .mobile-navigation a:focus {
     color: var(--accent-text-color);
+  }
+  .mobile-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
   }
   .mobile-contacts a {
     font-style: normal;
