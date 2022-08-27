@@ -4,7 +4,7 @@
 
 @media screen and(max-width:767px) {
     .hero {
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgi-mobile.jpg);
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(..//images/bgi-mobile.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -61,7 +61,7 @@
 screen and (min-resolution: 192dpi) and (max-width:767px),
 screen and (min-resolution: 2dppx) and (max-width:767px) {
         .hero {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/bgi-mobile@2x.jpg);
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(..//images/mobile/bgi-mobile@2x.jpg);
         }
 }
 
