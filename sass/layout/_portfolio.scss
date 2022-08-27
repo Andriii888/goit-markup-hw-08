@@ -5,8 +5,9 @@
         justify-content: center;
         gap: 8px;
         flex-wrap: wrap;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         justify-content: flex-start;
+        row-gap: 15px;
     }
 
     .img-portfolio {
@@ -192,6 +193,11 @@
             border: 1px solid #EEEEEE;
             padding: 20px 24px;
         }
+}
+@media screen and (min-width:1200px) {
+    .portfolio-menu{
+        margin-bottom: 56px;
+    }
 }
 // @media screen and (min-width:1200px) {}
 // .portfolio-menu {

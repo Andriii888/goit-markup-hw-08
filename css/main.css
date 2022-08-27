@@ -36,6 +36,7 @@
 .container {
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -73,7 +74,7 @@ ol {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -97,11 +98,18 @@ a {
   text-decoration: none;
 }
 
-.section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
 }
-
+@media screen and (mmin-width: 1200px) {
+  .section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+}
 button {
   cursor: pointer;
   font-family: var(--font-family-primary);
@@ -115,6 +123,12 @@ button:hover, button:focus {
 }
 
 @media screen and (max-width: 767px) {
+  .mobile-navigation .current {
+    color: var(--accent-text-color);
+  }
+  .icons-mobmenu {
+    display: none;
+  }
   .mobile-menu {
     position: fixed;
     height: 100%;
@@ -144,6 +158,11 @@ button:hover, button:focus {
     padding-top: 48px;
     padding-bottom: 48px;
     padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1000;
+    background-color: #fff;
   }
   .mobile-menu__btn {
     position: absolute;
@@ -201,12 +220,11 @@ button:hover, button:focus {
     color: var(--accent-text-color);
   }
   .mobile-contacts {
-    margin-top: 200px;
+    margin-top: auto;
   }
   .mobile-social-menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     font-size: 18px;
     line-height: 1.22;
     margin-top: 64px;
@@ -214,6 +232,11 @@ button:hover, button:focus {
   }
   .mobile-social-menu a {
     color: var(--accent-text-color);
+  }
+  .mobile-social-menu__items:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid;
   }
 }
 @media screen and (min-width: 768px) {
@@ -225,7 +248,7 @@ button:hover, button:focus {
   .footer-user-input {
     display: block;
     padding-left: 16px;
-    width: 358px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -251,12 +274,6 @@ button:hover, button:focus {
     margin-bottom: 20px;
     color: var(--color-white);
   }
-  .footer-user-input-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   .footer-user-btn {
     display: flex;
     justify-content: center;
@@ -273,16 +290,18 @@ button:hover, button:focus {
     margin-top: 20px;
   }
   .footer-user-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     margin-top: 60px;
   }
   .footer-user-icon {
     fill: currentColor;
     color: var(--color-white);
     margin-left: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-user-input {
+    width: 450px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -336,6 +355,7 @@ p.overlay-portfolio-text {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow: auto;
   z-index: 100;
   top: 0;
   left: 0;
@@ -346,9 +366,10 @@ p.overlay-portfolio-text {
   position: absolute;
   top: 50%;
   left: 50%;
+  overflow: auto;
   transform: translate(-50%, -50%);
   max-width: 450px;
-  height: 581px;
+  height: 600px;
   background-color: var(--color-white);
   padding: 40px;
 }
@@ -537,6 +558,7 @@ p.overlay-portfolio-text {
   align-items: center;
   justify-content: space-between;
   padding-top: 10px;
+  border-bottom: 1px solid #ECECEC;
 }
 
 .logo {
@@ -555,6 +577,9 @@ p.overlay-portfolio-text {
 }
 
 @media screen and (min-width: 768px) {
+  .header-container {
+    padding-bottom: 15px;
+  }
   .mobile-menu-open {
     display: none;
   }
@@ -661,7 +686,7 @@ p.overlay-portfolio-text {
 }
 @media screen and (max-width: 767px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mobile/bgi-mobile.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgi-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -670,7 +695,7 @@ p.overlay-portfolio-text {
   }
   .hero_position {
     margin: 0 auto;
-    padding: 118px 60px;
+    padding: 118px 0px;
   }
   .hero__title {
     font-weight: 900;
@@ -721,7 +746,7 @@ p.overlay-portfolio-text {
   }
   .hero_position {
     margin: 0 auto;
-    padding: 118px 60px;
+    padding: 118px 0px;
   }
   .hero__title {
     font-weight: 900;
@@ -846,6 +871,9 @@ p.overlay-portfolio-text {
   .our-advantage h3 {
     margin-bottom: 10px;
     text-align: center;
+  }
+  .our-advantage li:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -981,7 +1009,7 @@ p.overlay-portfolio-text {
   .title-team {
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
@@ -1007,10 +1035,6 @@ p.overlay-portfolio-text {
     color: var(--text-color);
   }
   .our-team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
     text-align: center;
   }
   .our-team li {
@@ -1046,18 +1070,34 @@ p.overlay-portfolio-text {
     fill: currentColor;
   }
 }
+@media screen and (min-width: 768px) {
+  .our-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .our-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
     flex-wrap: nowrap;
   }
 }
+.title-team {
+  font-size: 36px;
+}
+
 @media screen and (min-width: 200px) {
   .clients-title {
     text-align: center;
     margin-bottom: 50px;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.17;
   }
   .list-clients {
     display: flex;
@@ -1101,6 +1141,10 @@ p.overlay-portfolio-text {
   .list-clients {
     gap: 20px;
   }
+  .clients-title {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 @media screen and (min-width: 200px) {
   .footer-logolinks {
@@ -1110,10 +1154,7 @@ p.overlay-portfolio-text {
     margin-top: 60px;
   }
   .footer-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    text-align: center;
   }
   .social-links-items-footer {
     display: flex;
@@ -1143,6 +1184,7 @@ p.overlay-portfolio-text {
     display: flex;
     width: 206px;
     gap: 10px;
+    margin: 0 auto;
   }
   address {
     margin-top: 20px;
@@ -1176,7 +1218,7 @@ p.overlay-portfolio-text {
 @media screen and (min-width: 768px) {
   .footer-tablet {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
   }
   .footer-logolinks {
@@ -1205,8 +1247,9 @@ p.overlay-portfolio-text {
     justify-content: center;
     gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     justify-content: flex-start;
+    row-gap: 15px;
   }
   .img-portfolio {
     display: flex;
@@ -1359,5 +1402,10 @@ p.overlay-portfolio-text {
   .info-portfolio {
     border: 1px solid #EEEEEE;
     padding: 20px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-menu {
+    margin-bottom: 56px;
   }
 }/*# sourceMappingURL=main.css.map */

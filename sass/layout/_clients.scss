@@ -3,8 +3,8 @@
                 text-align: center;
                 margin-bottom: 50px;
                 font-weight: 700;
-                font-size: 36px;
-                line-height: 1.16;
+                font-size: 28px;
+                line-height: 1.17;
             }
         
             .list-clients {
@@ -57,6 +57,11 @@
             
             gap:20px;
         }
+                 .clients-title {
+                    font-size: 36px;
+                    line-height: 1.16;
+
+                 }
 }
     // .clients-items {
     //     display: flex;

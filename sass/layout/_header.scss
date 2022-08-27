@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top:10px;
+    border-bottom:1px solid #ECECEC;
 }
 .logo {
     font-family: 'Raleway';
@@ -29,6 +30,9 @@
 
 //////////////tablet/////
 @media screen and (min-width:768px){
+    .header-container {
+        padding-bottom: 15px;
+    }
     .mobile-menu-open{
     display: none;
 }
