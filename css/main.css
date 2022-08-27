@@ -104,7 +104,7 @@ a {
     padding-top: 60px;
   }
 }
-@media screen and (mmin-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .section {
     padding-bottom: 94px;
     padding-top: 94px;
@@ -306,14 +306,21 @@ button:hover, button:focus {
 }
 @media screen and (min-width: 1200px) {
   .footer-user-input-box {
+    display: flex;
+    align-items: center;
+  }
+  .footer-user-input-box {
     flex-direction: row;
+  }
+  .footer-user-input {
+    width: 358px;
   }
   .footer-user-btn {
     margin-top: 0;
     margin-left: 12px;
   }
   .footer-user-title {
-    justify-content: start;
+    text-align: start;
   }
   .footer-user-form {
     margin-top: 0;
@@ -669,6 +676,9 @@ p.overlay-portfolio-text {
   }
 }
 @media screen and (min-width: 1200px) {
+  .header-container {
+    padding-bottom: 20px;
+  }
   .header__contacts {
     display: flex;
     margin-left: auto;
@@ -1233,7 +1243,7 @@ p.overlay-portfolio-text {
     margin-right: 70px;
   }
   .footer-links {
-    flex-direction: row;
+    display: flex;
     align-items: baseline;
   }
   .footer-tablet {

@@ -9,11 +9,6 @@ text-align: center;
     .footer-links {
         text-align: center;
     }
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: center;
-    //         flex-direction: column;
-    //     }
                 .social-links-items-footer {
                     display: flex;
                     width: 44px;
@@ -103,13 +98,15 @@ text-align: center;
 
 }
 .footer-links{
-flex-direction: row;
+    display: flex;
+// flex-direction: row;
 align-items: baseline;
 }
 .footer-tablet{
     margin-right: 93px;
     align-items: baseline;
 }
+
 }
 // .social-links-items-footer {
 //     display: flex;

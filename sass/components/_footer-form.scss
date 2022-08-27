@@ -79,15 +79,22 @@
 }
 @media screen and (min-width:1200px) {
     .footer-user-input-box {
+            display: flex;
+            align-items: center;
+        }
+    .footer-user-input-box {
             flex-direction: row;
         }
+                        .footer-user-input {
+                            width: 358px;
+                        }
         
                 .footer-user-btn{
                     margin-top: 0;
                     margin-left: 12px;
                 }
          .footer-user-title{
-            justify-content: start;
+            text-align: start;
          }
          .footer-user-form{
             margin-top: 0;

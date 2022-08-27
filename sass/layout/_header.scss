@@ -141,6 +141,9 @@
 
 // //////////////DESCTOP//////////////////
 @media screen and (min-width:1200px){
+        .header-container {
+                padding-bottom: 20px;
+            }
 .header__contacts {
             display: flex;
             margin-left: auto;
