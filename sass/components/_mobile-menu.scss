@@ -117,6 +117,7 @@
         line-height: 1.22;
         margin-top: 64px;
         flex-wrap: wrap;
+        font-weight: 500;
         & a{
         color: var(--accent-text-color);
         }
@@ -124,7 +125,7 @@
 .mobile-social-menu__items:not(:last-child){
     padding-right: 10px;
     margin-right: 10px;
-    border-right: 1px solid;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 }

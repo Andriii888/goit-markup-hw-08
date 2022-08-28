@@ -11,7 +11,6 @@
     align-items: center;
     justify-content: space-between;
     padding-top:10px;
-    border-bottom:1px solid #ECECEC;
 }
 .logo {
     font-family: 'Raleway';
@@ -27,11 +26,15 @@
 .logo__studio {
     color: var(--logo-color-header);
 }
-
+@media screen and (max-width:1600px){
+    .header{
+            border-bottom: 1px solid #ECECEC;
+    }
+}
 //////////////tablet/////
 @media screen and (min-width:768px){
     .header-container {
-        padding-bottom: 15px;
+        padding: 20px;
     }
     .mobile-menu-open{
     display: none;

@@ -17,10 +17,6 @@
         justify-content: center;
         flex-direction:column
     }
-        .img-portfolio__items{
-            min-width: 350px;
-        }
-
    
     .img-portfolio-items,
     .portfolio-menu-items {
@@ -104,7 +100,7 @@
             display: flex;
             justify-content: center;
             gap: 8px;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
     
         .img-portfolio {

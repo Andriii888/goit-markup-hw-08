@@ -230,6 +230,7 @@ button:hover, button:focus {
     line-height: 1.22;
     margin-top: 64px;
     flex-wrap: wrap;
+    font-weight: 500;
   }
   .mobile-social-menu a {
     color: var(--accent-text-color);
@@ -237,7 +238,7 @@ button:hover, button:focus {
   .mobile-social-menu__items:not(:last-child) {
     padding-right: 10px;
     margin-right: 10px;
-    border-right: 1px solid;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
 @media screen and (min-width: 768px) {
@@ -376,7 +377,6 @@ p.overlay-portfolio-text {
   left: 50%;
   overflow: auto;
   transform: translate(-50%, -50%);
-  max-width: 450px;
   width: 90%;
   height: 100%;
   background-color: var(--color-white);
@@ -391,6 +391,11 @@ p.overlay-portfolio-text {
 @media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .modal {
+    border-radius: 4px;
   }
 }
 .modal-close-btn {
@@ -572,7 +577,6 @@ p.overlay-portfolio-text {
   align-items: center;
   justify-content: space-between;
   padding-top: 10px;
-  border-bottom: 1px solid #ECECEC;
 }
 
 .logo {
@@ -590,9 +594,14 @@ p.overlay-portfolio-text {
   color: var(--logo-color-header);
 }
 
+@media screen and (max-width: 1600px) {
+  .header {
+    border-bottom: 1px solid #ECECEC;
+  }
+}
 @media screen and (min-width: 768px) {
   .header-container {
-    padding-bottom: 15px;
+    padding: 20px;
   }
   .mobile-menu-open {
     display: none;
@@ -932,7 +941,7 @@ p.overlay-portfolio-text {
     text-align: start;
   }
   .our-advantage li {
-    width: 300px;
+    width: 354px;
   }
   .our-advantage {
     display: flex;
@@ -1087,6 +1096,11 @@ p.overlay-portfolio-text {
     fill: currentColor;
   }
 }
+@media screen and (max-width: 767px) {
+  .our-team__items:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) {
   .our-team {
     display: flex;
@@ -1103,11 +1117,10 @@ p.overlay-portfolio-text {
     justify-content: center;
     flex-wrap: nowrap;
   }
+  .title-team {
+    font-size: 36px;
+  }
 }
-.title-team {
-  font-size: 36px;
-}
-
 @media screen and (min-width: 200px) {
   .clients-title {
     text-align: center;
@@ -1164,14 +1177,8 @@ p.overlay-portfolio-text {
   }
 }
 @media screen and (min-width: 200px) {
-  .footer-logolinks {
-    text-align: center;
-  }
   .social-links-box {
     margin-top: 60px;
-  }
-  .footer-links {
-    text-align: center;
   }
   .social-links-items-footer {
     display: flex;
@@ -1232,14 +1239,16 @@ p.overlay-portfolio-text {
     fill: currentColor;
   }
 }
+@media screen and (max-width: 1199px) {
+  .footer-links {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer-tablet {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-  }
-  .footer-logolinks {
-    margin-right: 165px;
   }
   .social-links-box {
     margin-top: 0;
@@ -1256,6 +1265,9 @@ p.overlay-portfolio-text {
   .footer-tablet {
     margin-right: 93px;
     align-items: baseline;
+  }
+  .footer-list-title {
+    text-align: start;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1274,9 +1286,6 @@ p.overlay-portfolio-text {
     gap: 30px;
     justify-content: center;
     flex-direction: column;
-  }
-  .img-portfolio__items {
-    min-width: 350px;
   }
   .img-portfolio-items,
 .portfolio-menu-items {
@@ -1347,7 +1356,7 @@ p.overlay-portfolio-text {
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .img-portfolio {
     display: flex;
