@@ -135,6 +135,7 @@ button:hover, button:focus {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 100;
     background-color: #fff;
     visibility: hidden;
     opacity: 0;
@@ -376,12 +377,18 @@ p.overlay-portfolio-text {
   overflow: auto;
   transform: translate(-50%, -50%);
   max-width: 450px;
-  height: 600px;
+  width: 90%;
+  height: 100%;
   background-color: var(--color-white);
   padding: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
   }
